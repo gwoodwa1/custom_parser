@@ -1,5 +1,5 @@
 testbed:
-  name: Multi Platform Network
+  name: My Home Lab
   credentials:
     default:
       username: '%ENV{PYATS_USERNAME}'
@@ -21,10 +21,10 @@ devices:
         protocol: ssh
     credentials:
       default:
-        password: root123
-        username: root
+        password: yourpassword
+        username: yourusername
       enable:
-        password: root123
+        password: yourenablepassword
     os: iosxe    
     type: iosxe
    
