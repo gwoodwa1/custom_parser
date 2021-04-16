@@ -7,7 +7,7 @@ Getting Started
 bash$ pip install pyats[full]
 
 # 2. clone this repository into your environment
-bash$ git clone https://github.com/
+bash$ git clone https://github.com/gwoodwa1/ParserCreation
 
 Tested Against Python 3.8.6
 
