@@ -3,7 +3,7 @@ Files associated with the creation of custom parsers
 
 Getting Started
 
-# 1. make sure pyATS (including the libraries) is installed if using the scratch.py file to run this against a CSR1000v/IOS-XE router
+# 1. make sure pyATS (including the libraries) is installed if using the scratch_test.py file to run this against a CSR1000v/IOS-XE router
 bash$ pip install pyats[full]
 
 # 2. clone this repository into your environment
