@@ -16,7 +16,7 @@ hostname:
         service_id: 100
         size: 1074
         sub_service: '2'
-        trust: Donnected
+        trust: Connected
       3:
         domain: '1'
         instance: 675952D8-B2F9-38A8-AE06-8CE5000160D1
