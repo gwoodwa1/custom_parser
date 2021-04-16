@@ -20,4 +20,3 @@ Service ID (Service:Subservice:Instance)         Trust     Domain Owner Size
 
 result=parser.showservdatabase(device_name=device_name,output=output,yaml_out=f'./show_service_routing_{device_name}.yaml')
 pprint.pprint(result, width=20)
-import pdb; pdb.set_trace()
