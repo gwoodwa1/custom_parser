@@ -38,7 +38,7 @@ class CustomParsers:
             match_pattern = pat1.match(line)
 
             if match_pattern:
-                index = index + 1
+                index +=1
                 group = match_pattern.groupdict()
 
                 temp_dict = (
