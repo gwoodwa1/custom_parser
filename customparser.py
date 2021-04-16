@@ -61,8 +61,7 @@ class CustomParsers:
                     temp_dict.update({"owner": int(group["owner"])})
                 if group['size'] and group['size'].isdigit():
                    temp_dict.update({"size": int(group["size"])})
-        import pdb; pdb.set_trace()
-        
+                
         if yaml_out:
             
             CustomParsers().yamlwriter(yaml_out=yaml_out, input_dict=self.output_dict)
