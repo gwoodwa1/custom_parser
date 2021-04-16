@@ -1,0 +1,32 @@
+testbed:
+  name: Multi Platform Network
+  credentials:
+    default:
+      username: '%ENV{PYATS_USERNAME}'
+      password: '%ENV{PYATS_PASSWORD}'
+    enable:
+      password: '%ENV{PYATS_PASSWORD}'
+    line:
+      password: '%ENV{PYATS_PASSWORD}'
+    linux: 
+      password: '%ENV{PYATS_PASSWORD}'
+
+devices:
+
+
+  R1:
+    connections:
+      cli:
+        ip: 192.168.1.233
+        protocol: ssh
+    credentials:
+      default:
+        password: root123
+        username: root
+      enable:
+        password: root123
+    os: iosxe    
+    type: iosxe
+   
+
+
