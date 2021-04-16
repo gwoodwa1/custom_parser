@@ -71,6 +71,5 @@ class CustomParsers:
     def yamlwriter(self, yaml_out=None, input_dict=None):
 
         with open(f'{yaml_out}', "w") as file:
-            
             yaml.dump(input_dict, file, allow_unicode=True)
         
