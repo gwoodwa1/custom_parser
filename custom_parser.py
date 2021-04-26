@@ -8,13 +8,11 @@ import yaml
 #  - Python Dictionary                         #
 #  - YAML File                                 #
 #                                              #
-#                                              #
 # =============================================#
 
 
-class CustomParsers:
-    def showservdatabase(self, output=None, device_name=None, yaml_out=None):
-    
+class custom_parsers:
+    def show_serv_database(self, output=None, device_name=None, yaml_out=None):
         result = output
 
         self.output_dict = {}
@@ -28,17 +26,15 @@ class CustomParsers:
         index = 0
 
         for line in result.splitlines():
-
             if line:
                 line = line.strip()
-
             else:
                 continue
 
             match_pattern = pat1.match(line)
 
             if match_pattern:
-                index +=1
+                index += 1
                 group = match_pattern.groupdict()
 
                 temp_dict = (
@@ -61,12 +57,10 @@ class CustomParsers:
                     temp_dict.update({"size": int(group["size"])})
 
         if yaml_out:
-
-            CustomParsers().yamlwriter(yaml_out=yaml_out, input_dict=self.output_dict)
+            custom_parsers().yamlwriter(yaml_out=yaml_out, input_dict=self.output_dict)
 
         return self.output_dict
 
     def yamlwriter(self, yaml_out=None, input_dict=None):
-
         with open(f"{yaml_out}", "w") as file:
             yaml.dump(input_dict, file, allow_unicode=True)

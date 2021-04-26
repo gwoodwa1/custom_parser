@@ -1,5 +1,5 @@
 testbed:
-  name: My Home Lab
+  name: Test Lab
   credentials:
     default:
       username: '%ENV{PYATS_USERNAME}'

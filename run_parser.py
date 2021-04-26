@@ -1,12 +1,11 @@
-from customparser import CustomParsers
+from custom_parser import custom_parsers
 import pprint
 
-parser = CustomParsers()
+parser = custom_parsers()
 
-device_name="R1"
+device_name = "R1"
 
-output="""
-
+output = """
 R1#  show service-routing database
 Service-Routing Database
 Service ID (Service:Subservice:Instance)         Trust     Domain Owner Size
@@ -18,5 +17,9 @@ Service ID (Service:Subservice:Instance)         Trust     Domain Owner Size
       102:2:933EF17C-54BA-5610-0325-B23200019D2E Connected 1      4       387
 """
 
-result=parser.showservdatabase(device_name=device_name,output=output,yaml_out=f'./show_service_routing_{device_name}.yaml')
+result = parser.show_serv_database(
+    device_name=device_name,
+    output=output,
+    yaml_out=f"./show_service_routing_{device_name}.yml",
+)
 pprint.pprint(result, width=20)
