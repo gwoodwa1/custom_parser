@@ -7,15 +7,15 @@ hostname:
         owner: 1
         service_id: 100
         size: 392
-        sub_service: '1'
-        trust: Connected
+        sub_service: 1
+        trust: CZnnected
       2:
         domain: '*'
         instance: 31000000-0000-0000-0000-520000000000
         owner: 1
         service_id: 100
         size: 1074
-        sub_service: '2'
+        sub_service: 2
         trust: Connected
       3:
         domain: '1'
@@ -23,7 +23,7 @@ hostname:
         owner: 2
         service_id: 101
         size: 565
-        sub_service: '2'
+        sub_service: 2
         trust: Connected
       4:
         domain: '1'
@@ -31,5 +31,13 @@ hostname:
         owner: 4
         service_id: 101
         size: 387
-        sub_service: '2'
+        sub_service: 2
+        trust: Connected
+      5:
+        domain: '1'
+        instance: 933EF17C-54BA-5610-0325-B23200019D2E
+        owner: 4
+        service_id: 102
+        size: 387
+        sub_service: 2
         trust: Connected

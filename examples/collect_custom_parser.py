@@ -4,7 +4,7 @@ import pprint
 
 parser = custom_parsers()
 
-testbed = Genie.init("./iosxe_testbed.yml")
+testbed = Genie.init("../testbeds/genie_testbed.yml")
 
 for device in testbed.devices:
     # Connect to the device
@@ -19,6 +19,7 @@ for device in testbed.devices:
     result = parser.show_serv_database(
         device_name=device,
         output=output,
-        yaml_out=f"./show_service_routing_{device}.yml",
+        yaml_out=f"outputs/show_service_routing_{device}.yml",
     )
+
     pprint.pprint(result, width=2)

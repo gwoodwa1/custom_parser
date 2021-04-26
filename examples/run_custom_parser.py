@@ -20,6 +20,6 @@ Service ID (Service:Subservice:Instance)         Trust     Domain Owner Size
 result = parser.show_serv_database(
     device_name=device_name,
     output=output,
-    yaml_out=f"./show_service_routing_{device_name}.yml",
+    yaml_out=f"outputs/show_service_routing_{device_name}.yml",
 )
 pprint.pprint(result, width=20)

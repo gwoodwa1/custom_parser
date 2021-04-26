@@ -1,0 +1,11 @@
+hostname:
+  R1:
+    index:
+      1:
+        domain: '*'
+        instance: 31000000-0000-0000-0000-520000000000
+        owner: 1
+        service_id: 100
+        size: 392
+        sub_service: 1
+        trust: CZnnected

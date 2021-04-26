@@ -18,7 +18,6 @@ class custom_parsers:
         self.output_dict = {}
 
         # 100:1:31000000-0000-0000-0000-520000000000 Connected *      1       392
-
         pat1 = re.compile(
             r"(?P<service>\d+):(?P<sub_service>\d+):(?P<instance>\S+)\s+(?P<trust>\w+)\s+(?P<domain>\S+)\s+(?P<owner>\d+)\s+(?P<size>\d+)"
         )
@@ -51,16 +50,17 @@ class custom_parsers:
                 temp_dict.update({"instance": group["instance"]})
                 temp_dict.update({"trust": group["trust"]})
                 temp_dict.update({"domain": group["domain"]})
+
                 if group["owner"] and group["owner"].isdigit():
                     temp_dict.update({"owner": int(group["owner"])})
                 if group["size"] and group["size"].isdigit():
                     temp_dict.update({"size": int(group["size"])})
 
         if yaml_out:
-            custom_parsers().yamlwriter(yaml_out=yaml_out, input_dict=self.output_dict)
+            custom_parsers().yaml_writer(yaml_out=yaml_out, input_dict=self.output_dict)
 
         return self.output_dict
 
-    def yamlwriter(self, yaml_out=None, input_dict=None):
+    def yaml_writer(self, yaml_out=None, input_dict=None):
         with open(f"{yaml_out}", "w") as file:
             yaml.dump(input_dict, file, allow_unicode=True)

@@ -4,7 +4,7 @@ import pprint
 
 device_name = "R1"
 
-with open(f"./show_service_routing_{device_name}.yml") as file:
+with open(f"outputs/show_service_routing_{device_name}.yml") as file:
     output = yaml.load(file, Loader=yaml.FullLoader)
 
 
@@ -24,6 +24,6 @@ for k in failed_entries:
 
 pprint.pprint(failed_dict)
 
-if failed_dict != {}:
-    with open(f"FAILED_show_service_{device_name}", "w") as file:
+if failed_dict:
+    with open(f"outputs/FAILED_show_service_{device_name}.yml", "w") as file:
         yaml.dump(failed_dict, file, allow_unicode=True)
