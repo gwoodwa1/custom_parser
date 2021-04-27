@@ -1,7 +1,7 @@
 # Custom Parser
 This repo contains files associated with creating your own custom parser using an example of `show service-routing database` on IOS-XE. This command is sufficiently obscure that a community-based parser does not already exist.
 
-The accompanying guide can be found at: <URL>
+The accompanying guide can be found at: https://www.packetflow.co.uk/how-to-build-a-custom-parser/
 
 ## Getting Started
 
