@@ -11,7 +11,7 @@ import yaml
 # =============================================#
 
 
-class custom_parsers:
+class CustomParsers:
     def show_serv_database(self, output=None, device_name=None, yaml_out=None):
         result = output
 
@@ -57,7 +57,7 @@ class custom_parsers:
                     temp_dict.update({"size": int(group["size"])})
 
         if yaml_out:
-            custom_parsers().yaml_writer(yaml_out=yaml_out, input_dict=self.output_dict)
+            CustomParsers().yaml_writer(yaml_out=yaml_out, input_dict=self.output_dict)
 
         return self.output_dict
 

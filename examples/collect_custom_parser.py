@@ -1,8 +1,8 @@
-from custom_parser import custom_parsers
+from custom_parser import CustomParsers
 from genie.conf import Genie
 import pprint
 
-parser = custom_parsers()
+parser = CustomParsers()
 
 testbed = Genie.init("../testbeds/genie_testbed.yml")
 

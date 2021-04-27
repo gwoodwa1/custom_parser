@@ -1,7 +1,7 @@
-from custom_parser import custom_parsers
+from custom_parser import CustomParsers
 import pprint
 
-parser = custom_parsers()
+parser = CustomParsers()
 
 device_name = "R1"
 
